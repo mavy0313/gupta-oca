@@ -22,5 +22,16 @@ public class Main {
         Boolean bool6 = Boolean.valueOf("TrUE");
         Double double4 = Double.valueOf(10);
 
+        System.out.println(double4.doubleValue());
+
+        System.out.println(Long.parseLong("1234"));
+        try {
+            Byte.parseByte("1024");
+        } catch (NumberFormatException e) {
+            System.out.println(e);
+        }
+
+        System.out.println(Boolean.parseBoolean("TrUe"));
+        System.out.println(Boolean.parseBoolean("NotBooleanShouldReturnFalse"));
     }
 }
