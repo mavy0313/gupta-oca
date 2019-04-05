@@ -33,5 +33,53 @@ public class Main {
 
         System.out.println(Boolean.parseBoolean("TrUe"));
         System.out.println(Boolean.parseBoolean("NotBooleanShouldReturnFalse"));
+
+        //
+        Long var1 = Long.valueOf(123);
+        Long var2 = Long.valueOf("123");
+        System.out.println(var1 == var2); // true - refer to the same cached object
+
+        Long var3 = Long.valueOf(223);
+        Long var4 = Long.valueOf(223);
+        System.out.println(var3 == var4); //false - refer to different objects, -128 to 127 are cached
+
+        //
+
+        Integer i1 = new Integer(10);
+        Integer i2 = new Integer(10);
+
+        Integer i3 = Integer.valueOf(10);
+        Integer i4 = Integer.valueOf(10);
+
+        Integer i5 = 10;
+        Integer i6 = 10;
+
+        System.out.println(i1 == i2);
+        System.out.println(i3 == i4);
+        System.out.println(i4 == i5);
+        System.out.println(i5 == i6);
+
+        System.out.println(i1.equals(i2));
+        System.out.println(i3.equals(i4));
+        System.out.println(i4.equals(i5));
+        System.out.println(i5.equals(i6));
+
+        Integer ii1 = new Integer(200);
+        Integer ii2 = new Integer(200);
+        Integer ii3 = Integer.valueOf(200);
+        Integer ii4 = Integer.valueOf(200);
+        Integer ii5 = 200;
+        Integer ii6 = 200;
+
+        System.out.println(ii1 == ii2);
+        System.out.println(ii3 == ii4);
+        System.out.println(ii4 == ii5);
+        System.out.println(ii5 == ii6);
+
+        Integer obj1 = 100;
+        Short obj2 = 100;
+        System.out.println(obj1.equals(obj2)); // - false
+//        System.out.println(obj1 == obj2); - doesn't compile
+
     }
 }
