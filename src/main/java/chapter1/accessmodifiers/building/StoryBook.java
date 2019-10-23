@@ -11,5 +11,9 @@ public class StoryBook extends Book {
 //        Book book = new Book();
 //        String value = book.author;
 //        book.modifyTemplate();
+
+//        no access to private-package members outside package
+//        int c = issueCount;
+//        issueHistory();
     }
 }

@@ -12,5 +12,8 @@ public class House {
 //        book.author = "ABC";
 //        book.modifyTemplate();
 
+//        no access to private-package members outside package
+//        int c = book.issueCount;
+//        book.issueHistory();
     }
 }

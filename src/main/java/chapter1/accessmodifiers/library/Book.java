@@ -6,4 +6,8 @@ public class Book {
 
     protected String author;
     protected void modifyTemplate() {}
+
+    int issueCount;
+    void issueHistory() {}
+
 }

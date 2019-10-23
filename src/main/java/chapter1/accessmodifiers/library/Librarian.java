@@ -5,5 +5,8 @@ public class Librarian {
         Book book = new Book();
         book.author = "ABC";
         book.modifyTemplate();
+
+        int c = book.issueCount;
+        book.issueHistory();
     }
 }
