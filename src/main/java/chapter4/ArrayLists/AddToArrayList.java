@@ -64,5 +64,78 @@ public class AddToArrayList {
 
         for (StringBuilder element : myArrList4)
             System.out.println(element);
+
+        ArrayList<String> myArrList5 = new ArrayList<String>();
+        myArrList5.add("One");
+        myArrList5.add("Two");
+        ArrayList<String> yourArrList = new ArrayList<String>();
+        yourArrList.add("Three");
+        yourArrList.add("Four");
+        myArrList5.addAll(1, yourArrList);
+        for (String val : myArrList5)
+            System.out.println(val);
+
+//        One
+//        Three
+//        Four
+//        Two
+
+        ArrayList<String> myArrList6 = new ArrayList<String>();
+        myArrList6.add("One");
+        myArrList6.add("Two");
+        myArrList6.clear();
+        for (String val:myArrList6) //empty output
+            System.out.println(val);
+
+        ArrayList<String> myArrList7 = new ArrayList<String>();
+        myArrList7.add("One");
+        myArrList7.add("Two");
+        String valFromList = myArrList7.get(1);
+        System.out.println(valFromList); //Two
+        System.out.println(myArrList7.size()); //2
+
+        ArrayList<StringBuilder> myArrList8 =
+                new ArrayList<StringBuilder>();
+        StringBuilder sb_1 = new StringBuilder("Jan");
+        StringBuilder sb_2 = new StringBuilder("Feb");
+        myArrList8.add(sb_1);
+        myArrList8.add(sb_2);
+        myArrList8.add(sb_2);
+        System.out.println(myArrList8.contains(new StringBuilder("Jan"))); //false
+        System.out.println(myArrList8.contains(sb_1)); //true
+        System.out.println(myArrList8.indexOf(new StringBuilder("Feb"))); //-1
+        System.out.println(myArrList8.indexOf(sb_2)); //1
+        System.out.println(myArrList8.lastIndexOf(new StringBuilder("Feb"))); //-1
+        System.out.println(myArrList8.lastIndexOf(sb_2)); //2
+
+        ArrayList<MyPerson> myArrList9 = new ArrayList<MyPerson>();
+        MyPerson p1 = new MyPerson("Shreya");
+        MyPerson p2 = new MyPerson("Paul");
+        myArrList9.add(p1);
+        myArrList9.add(p2);
+        myArrList9.add(p2);
+        System.out.println(myArrList9.contains(new MyPerson("Shreya"))); //true
+        System.out.println(myArrList9.contains(p1)); //true
+        System.out.println(myArrList9.indexOf(new MyPerson("Paul"))); //1
+        System.out.println(myArrList9.indexOf(p2)); //1
+        System.out.println(myArrList9.lastIndexOf(new MyPerson("Paul"))); //2
+        System.out.println(myArrList9.lastIndexOf(p2)); //2
+
+        ArrayList<StringBuilder> myArrList10 = new ArrayList<StringBuilder>();
+        StringBuilder sb__1 = new StringBuilder("Jan");
+        StringBuilder sb__2 = new StringBuilder("Feb");
+        myArrList10.add(sb__1);
+        myArrList10.add(sb__2);
+        myArrList10.add(sb__2);
+        ArrayList<StringBuilder> assignedArrList = myArrList10;
+        ArrayList<StringBuilder> clonedArrList =
+                (ArrayList<StringBuilder>)myArrList10.clone();
+        System.out.println(myArrList10 == assignedArrList); //true
+        System.out.println(myArrList10 == clonedArrList); //false
+        StringBuilder myArrVal = myArrList10.get(0);
+        StringBuilder assignedArrVal = assignedArrList.get(0);
+        StringBuilder clonedArrVal = clonedArrList.get(0);
+        System.out.println(myArrVal == assignedArrVal); //true
+        System.out.println(myArrVal == clonedArrVal); //true
     }
 }
