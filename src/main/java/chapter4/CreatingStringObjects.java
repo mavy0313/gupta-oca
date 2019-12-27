@@ -24,5 +24,11 @@ public class CreatingStringObjects {
         String str5 = new String(sb1);
         StringBuffer sb2 = new StringBuffer("String Buffer");
         String str6 = new String(sb2);
+
+        StringBuilder sb3 = new StringBuilder("123456");
+        sb3.subSequence(2, 4);
+        sb3.deleteCharAt(3);
+        sb3.reverse();
+        System.out.println(sb3);
     }
 }
