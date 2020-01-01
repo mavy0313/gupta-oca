@@ -1,4 +1,4 @@
-package chapter6.interfaces.referencevariable;
+package chapter6.referencevariable;
 
 class Employee {
     String name;
